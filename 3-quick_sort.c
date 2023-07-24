@@ -72,3 +72,4 @@ return;
 
 quick_sort_helper(array, 0, size - 1);
 }
+
