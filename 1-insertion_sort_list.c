@@ -37,6 +37,8 @@ insertion_point->prev = current;
 if (current->prev == NULL)
 *list = current;
 
+if (insertion_point != NULL)
+insertion_point->next = current;
 /* Move to the previous node for the next iteration */
 insertion_point = current->prev;
 /* Print the list after each swap */

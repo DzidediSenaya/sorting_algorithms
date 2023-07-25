@@ -18,7 +18,7 @@ return;
 
 for (x = 0; x < size - 1; x++)
 {
-for (y = 0; y < size - y - 1; y++)
+for (y = 0; y < size - x - 1; y++)
 {
 if (array[y] > array[y + 1])
 {
