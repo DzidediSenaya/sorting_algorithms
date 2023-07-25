@@ -1,8 +1,14 @@
 #ifndef DECK_H
 #define DECK_H
-
 #include <stddef.h>
 
+/**
+ * enum kind_e - Represents the kinds of playing cards
+ * @SPADE: Spade kind
+ * @HEART: Heart kind
+ * @CLUB: Club kind
+ * @DIAMOND: Diamond kind
+ */
 typedef enum kind_e
 {
 SPADE = 0,

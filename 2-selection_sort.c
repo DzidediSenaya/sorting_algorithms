@@ -11,7 +11,7 @@
 void selection_sort(int *array, size_t size)
 {
 size_t x, y, min_index;
-int temp;    
+int temp;
 
 if (array == NULL || size < 2)
 return;

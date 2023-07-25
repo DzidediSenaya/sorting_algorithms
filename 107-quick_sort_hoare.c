@@ -53,17 +53,13 @@ int j = high + 1;
 
 while (1)
 {
-do
-{
+do {
 i++;
-}
-while (array[i] < pivot);
+} while (array[i] < pivot);
 
-do
-{
+do {
 j--;
-}
-while (array[j] > pivot);
+} while (array[j] > pivot);
 
 if (i >= j)
 return (j);

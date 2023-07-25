@@ -39,7 +39,7 @@ while (list)
 len++;
 list = list->next;
 }
-return len;
+return (len);
 }
 
 /**
@@ -57,9 +57,9 @@ const card_t *c2 = (const card_t *)card2;
 int value_diff = get_value_index(c1->value) - get_value_index(c2->value);
 
 if (value_diff != 0)
-return value_diff;
+return (value_diff);
 
-return c1->kind - c2->kind;
+return (c1->kind - c2->kind);
 }
 
 /**
@@ -70,7 +70,7 @@ return c1->kind - c2->kind;
 int get_value_index(const char *value)
 {
 int (i);
-static const char *values[] = {
+static const char * const values[] = {
 "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"
 };
 
@@ -98,7 +98,7 @@ if (deck == NULL || *deck == NULL)
 return;
 
 len = list_length(*deck);
-cards = malloc(len * sizeof(const card_t *));
+cards = malloc(len *sizeof(const card_t *));
 if (!cards)
 return;
 
