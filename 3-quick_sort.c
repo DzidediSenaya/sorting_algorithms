@@ -33,14 +33,21 @@ for (y = low; y <= high - 1; y++)
 if (array[y] <= pivot)
 {
 x++;
+if (x != y)
+{
 swap(&array[x], &array[y]);
+print_array(array, high + 1);
 }
 }
+}
+if (x + 1 != high)
+{
 swap(&array[x + 1], &array[high]);
+print_array(array, high + 1);
+}
 
 return (x + 1);
 }
-
 
 /**
  * quick_sort_helper - Recursive function to
