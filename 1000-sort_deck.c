@@ -47,8 +47,8 @@ return len;
  * @card1: Pointer to the first card
  * @card2: Pointer to the second card
  * Return: Positive number if card1 > card2,
- *         Negative number if card1 < card2,
- *         Zero if card1 == card2
+ * Negative number if card1 < card2,
+ * Zero if card1 == card2
  */
 int compare_cards(const void *card1, const void *card2)
 {
@@ -86,10 +86,6 @@ return (-1);
 /**
  * sort_deck - Sorts a deck of cards
  * @deck: Double pointer to the head of the deck
- *
- * This function sorts a deck of cards in ascending order according to the
- * values and kinds of the cards. The sorting is done in-place by swapping
- * the nodes of the doubly linked list that represents the deck.
  */
 void sort_deck(deck_node_t **deck)
 {
@@ -121,3 +117,4 @@ current = current->next;
 }
 free(cards);
 }
+
