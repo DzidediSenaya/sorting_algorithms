@@ -14,10 +14,10 @@ void swap(int *a, int *b, size_t length);
  */
 void bitonic_sort(int *array, size_t size)
 {
-    if (array == NULL || size < 2)
-        return;
+if (array == NULL || size < 2)
+return;
 
-    bitonic_sort_recursive(array, size, 1, size);
+bitonic_sort_recursive(array, size, 1, size);
 }
 
 /**
@@ -29,14 +29,14 @@ void bitonic_sort(int *array, size_t size)
  */
 void bitonic_sort_recursive(int *array, size_t size, int dir, size_t length)
 {
-    size_t half;
-    if (size > 1)
-    {
-        half = size / 2;
-        bitonic_sort_recursive(array, half, 1, length);
-        bitonic_sort_recursive(array + half, half, 0, length);
-        bitonic_merge(array, size, dir, length);
-    }
+size_t half;
+if (size > 1)
+{
+half = size / 2;
+bitonic_sort_recursive(array, half, 1, length);
+bitonic_sort_recursive(array + half, half, 0, length);
+bitonic_merge(array, size, dir, length);
+}
 }
 
 /**
@@ -48,20 +48,20 @@ void bitonic_sort_recursive(int *array, size_t size, int dir, size_t length)
  */
 void bitonic_merge(int *array, size_t size, int dir, size_t length)
 {
-    size_t half;
-    size_t i;
+size_t half;
+size_t i;
 
-    if (size > 1)
-    {
-        half = size / 2;
-        for (i = 0; i < half; i++)
-        {
-            if (dir == (array[i] > array[i + half]))
-                swap(&array[i], &array[i + half], length);
-        }
-        bitonic_merge(array, half, dir, length);
-        bitonic_merge(array + half, half, dir, length);
-    }
+if (size > 1)
+{
+half = size / 2;
+for (i = 0; i < half; i++)
+{
+if (dir == (array[i] > array[i + half]))
+swap(&array[i], &array[i + half], length);
+}
+bitonic_merge(array, half, dir, length);
+bitonic_merge(array + half, half, dir, length);
+}
 }
 
 /**
@@ -72,10 +72,10 @@ void bitonic_merge(int *array, size_t size, int dir, size_t length)
  */
 void swap(int *a, int *b, size_t length)
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+int temp = *a;
+*a = *b;
+*b = temp;
 
-    print_array(a, length);
+print_array(a, length);
 }
 
